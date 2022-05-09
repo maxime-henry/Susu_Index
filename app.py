@@ -3,11 +3,11 @@ import streamlit as st
 
 st.set_page_config( page_title='Susu Index', page_icon="💦")
 st.markdown('<style>h1{color: red;}</style>', unsafe_allow_html=True )
-st.title("Susu Index")
-st.subheader("Calcul de l'index de susu en fonction de la température, de l'humidité et de votre sensibilité au soleil")
+st.title("Index de Transpiration")
+st.subheader("Calcul de l'index de transpiration en fonction de la température, de l'humidité et de votre sensibilité au chaud")
 
 # Orgine 
-origin_dict = {"J'ai pas d'origine":1,"Breton":1.5, "Dromadaire":0.8, "Zoulette":1.8, "J'aime bien le chaud":0.9}
+origin_dict = {"Je n'ai pas d'origine":1,"Breton":1.5, "Toulousain":0.8, "Espagnol":0.75, "Alaska":1.7}
 
 col1, col2 = st.columns(2)
 
@@ -41,8 +41,8 @@ HI_corr = conversion_origin(origine)
 st.markdown('<h2 style=" text-align:center">Vous etes en </h2> ', unsafe_allow_html=True )
 
 if HI_corr <25:
-    bilan = "sah"
-    commentaire = 'T inquiète pas va, ça va aller'
+    bilan = "confort"
+    commentaire = 'Tinquiète pas va, ça va aller'
     st.markdown(f'<h2 style="font-size: 2rem; text-align:center; font-family:verdana">{bilan}</h2>', unsafe_allow_html=True )
     st.markdown(f'<p style="text-align:center">{commentaire}</p>', unsafe_allow_html=True)
 elif HI_corr >=25 and HI_corr < 32:
@@ -60,6 +60,6 @@ elif HI_corr>=50:
 
 
 
-st.caption("Cet index de susu est calculé de manière très précise et scientifique basé sur les travaux de Robert G. Steadman de 1979")
+st.caption("Cet index de transpiration est calculé de manière très précise et scientifique basé sur les travaux de Robert G. Steadman de 1979")
 
 
