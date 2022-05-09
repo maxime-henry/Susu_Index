@@ -7,13 +7,13 @@ st.title("Susu Index")
 st.subheader("Calcul de l'index de susu en fonction de la température, de l'humidité et de votre sensibilité au soleil")
 
 # Orgine 
-origin_dict = {"J'ai pas d'origine":1,"Breton":1.5, "Dromadaire":0.9, "Irlandais":1.8}
+origin_dict = {"J'ai pas d'origine":1,"Breton":1.5, "Dromadaire":0.8, "Zoulette":1.8, "J'aime bien le chaud":0.9}
 
 col1, col2 = st.columns(2)
 
 with col1:
 
-    tempC = st.slider("Température", -10,50,20)
+    tempC = st.slider("Température", 20,50,20)
     temp = (tempC * (9/5))+32
 
     hum = st.slider('Humidité', 0,100,70)
@@ -42,7 +42,9 @@ st.markdown('<h2 style=" text-align:center">Vous etes en </h2> ', unsafe_allow_h
 
 if HI_corr <25:
     bilan = "sah"
-    st.markdown(f'<h2 style="font-size: 2rem; text-align:center; font-family:verdana; color:green">{bilan}</h2>', unsafe_allow_html=True )
+    commentaire = 'T inquiète pas va, ça va aller'
+    st.markdown(f'<h2 style="font-size: 2rem; text-align:center; font-family:verdana">{bilan}</h2>', unsafe_allow_html=True )
+    st.markdown(f'<p style="text-align:center">{commentaire}</p>', unsafe_allow_html=True)
 elif HI_corr >=25 and HI_corr < 32:
     bilan = "inconfort"
     st.markdown(f'<h2 style="font-size: 3rem; text-align:center; font-family:verdana; color:green">{bilan}</h2>', unsafe_allow_html=True )
@@ -55,9 +57,6 @@ elif HI_corr>=40 and HI_corr<50:
 elif HI_corr>=50:
     bilan= "danger extreme"
     st.markdown(f'<h2 style="font-size: 5rem; text-align:center; font-family:verdana; color:red">{bilan}</h2>', unsafe_allow_html=True )
-
-
-print(HI_corr)
 
 
 
