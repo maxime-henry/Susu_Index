@@ -47,7 +47,7 @@ if HI_corr <25:
     st.markdown(f'<p style="text-align:center">{commentaire}</p>', unsafe_allow_html=True)
 elif HI_corr >=25 and HI_corr < 32:
     bilan = "inconfort"
-    st.markdown(f'<h2 style="font-size: 3rem; text-align:center; font-family:verdana; color:green">{bilan}</h2>', unsafe_allow_html=True )
+    st.markdown(f'<h2 style="font-size: 3rem; text-align:center; font-family:verdana; color:orange">{bilan}</h2>', unsafe_allow_html=True )
 elif HI_corr >= 32 and HI_corr<40:
     bilan = "extreme inconfort"
     st.markdown(f'<h2 style="font-size: 4rem; text-align:center; font-family:verdana;color:orange">{bilan}</h2>', unsafe_allow_html=True )
