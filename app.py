@@ -38,7 +38,7 @@ HI_corr = conversion_origin(origine)
 
 
 
-st.markdown(f'<h2 style=" text-align:center">Température ressentie {HI} °C, Vous êtes en </h2> ', unsafe_allow_html=True )
+st.markdown(f'<h2 style=" text-align:center">Température ressentie {round(HI,0)} °C, Vous êtes en </h2> ', unsafe_allow_html=True )
 
 if HI_corr <25:
     bilan = "confort"
