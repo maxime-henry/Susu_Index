@@ -34,8 +34,19 @@ def conversion_origin(origine):
     HI_corr = HI*coeff
     return(HI_corr)
 
-truc = conversion_origin(origine)
-truc
+HI_corr = conversion_origin(origine)
 
+bilan = "Tranquille"
+
+if HI_corr > 25:
+    bilan = "Inconfort"
+if HI_corr > 32:
+    bilan = "Extreme inconfort"
+if HI_corr>40:
+    bilan = "Danger"
+if HI_corr>50:
+    bilan= "Danger extreme"
+
+st.header("Vous etes en " + bilan)
 
 
