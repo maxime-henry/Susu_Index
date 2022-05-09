@@ -38,7 +38,7 @@ HI_corr = conversion_origin(origine)
 
 
 
-st.markdown('<h2 style=" text-align:center">Vous etes en </h2> ', unsafe_allow_html=True )
+st.markdown('<h2 style=" text-align:center">Vous êtes en </h2> ', unsafe_allow_html=True )
 
 if HI_corr <25:
     bilan = "confort"
