@@ -41,24 +41,30 @@ HI_corr = conversion_origin(origine)
 st.markdown(f'<h2 style=" text-align:center">Température ressentie {round(HI,0)} °C, Vous êtes en </h2> ', unsafe_allow_html=True )
 
 if HI_corr <25:
-    bilan = "confort"
-    commentaire = 'Tinquiète pas va, ça va aller'
+    bilan = "zone de confort"
+    commentaire = 'Tout vas bien, detendez vous 😎'
     st.markdown(f'<h2 style="font-size: 2rem; text-align:center; font-family:verdana">{bilan}</h2>', unsafe_allow_html=True )
-    st.markdown(f'<p style="text-align:center">{commentaire}</p>', unsafe_allow_html=True)
+    
 elif HI_corr >=25 and HI_corr < 32:
     bilan = "inconfort"
+    commentaire = "Il commence à faire chaud, il faut boire de l'eau, beaucoup d'eau 🚰"
     st.markdown(f'<h2 style="font-size: 3rem; text-align:center; font-family:verdana; color:orange">{bilan}</h2>', unsafe_allow_html=True )
 elif HI_corr >= 32 and HI_corr<40:
     bilan = "extreme inconfort"
+    commentaire = "Phew, il fait vraiment chaud ici, trouvons un peu de fraicheur 💨"
     st.markdown(f'<h2 style="font-size: 4rem; text-align:center; font-family:verdana;color:orange">{bilan}</h2>', unsafe_allow_html=True )
 elif HI_corr>=40 and HI_corr<50:
     bilan = "danger"
+    commentaire = " 🥵🥵🥵🥵🥵🥵🥵🥵 "
     st.markdown(f'<h2 style="font-size: 4.5rem; text-align:center; font-family:verdana; color:IndianRed">{bilan}</h2>', unsafe_allow_html=True )
 elif HI_corr>=50:
     bilan= "danger extreme"
+    commentaire = "🔥🔥🔥🔥🔥🔥🔥"
     st.markdown(f'<h2 style="font-size: 5rem; text-align:center; font-family:verdana; color:red">{bilan}</h2>', unsafe_allow_html=True )
 
 
+
+st.markdown(f'<p style="text-align:center">{commentaire}</p>', unsafe_allow_html=True)
 
 st.caption("Cet index de transpiration est calculé de manière très précise et scientifique basé sur les travaux de Robert G. Steadman de 1979")
 
