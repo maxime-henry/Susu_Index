@@ -36,17 +36,21 @@ def conversion_origin(origine):
 
 HI_corr = conversion_origin(origine)
 
-bilan = "Tranquille"
+bilan = "tranquille"
 
 if HI_corr > 25:
-    bilan = "Inconfort"
+    bilan = "inconfort"
 if HI_corr > 32:
-    bilan = "Extreme inconfort"
+    bilan = "extreme inconfort"
 if HI_corr>40:
-    bilan = "Danger"
+    bilan = "danger"
 if HI_corr>50:
-    bilan= "Danger extreme"
+    bilan= "danger extreme"
 
 st.header("Vous etes en " + bilan)
+
+st.markdown('<style>h1{color: red;}<h1>Bilan</h1></style>', unsafe_allow_html=True )
+
+st.caption("Cet index de susu est calculé de manière très précise et scientifique basé sur les travaux de Robert G. Steadman de 1979")
 
 
