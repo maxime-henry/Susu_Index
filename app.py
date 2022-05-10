@@ -8,7 +8,7 @@ st.subheader("Calcul de l'index de transpiration en fonction de la température,
 
 
 # Orgine 
-origin_dict = {"Je n'ai pas d'origine":1,"Breton":1.5, "Toulousain":0.8, "Espagnol":0.75, "Alaska":1.7}
+origin_dict = {"Je n'ai pas d'origine":1,"Breton":1.5, "Toulousain":0.8, "Espagnol":0.75, "Ukrainien":1.4,"Alaska":1.7}
 
 col1, col2 = st.columns(2)
 
