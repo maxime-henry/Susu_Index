@@ -68,6 +68,6 @@ elif HI_corr>=50:
 st.markdown(f'<p style="text-align:center">{commentaire}</p>', unsafe_allow_html=True)
 
 st.caption("Cet index de transpiration est calculé de manière très précise et scientifique basé sur les travaux de Robert G. Steadman de 1979.")
-st.caption("Слава Україні!)
+st.caption("Слава Україні!")
 
 
